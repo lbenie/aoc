@@ -77,15 +77,10 @@ const getPlayerScore = (player: Player2) => {
   }
 }
 
-const getMatchScores = () => {
-  let score = 0
-
-  for (const match of data) {
+const getMatchScores = () =>
+  data.reduce((acc, match) => {
     const [elf, player] = match.split(' ') as [Player1, Player2]
-    score += getScore(elf, player)
-  }
-
-  return score
-}
+    return acc + getScore(elf, player)
+  }, 0)
 
 console.log(getMatchScores())

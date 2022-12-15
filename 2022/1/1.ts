@@ -1,8 +1,6 @@
-import { parser } from '../../utils'
+import { getInput } from '../../utils'
 
-import { resolve } from 'path'
-
-const data = parser(resolve(__dirname, 'input.txt'))
+const data = getInput(__dirname)
 
 const getMostCalories = () => {
   let max = 0

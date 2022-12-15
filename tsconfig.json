@@ -17,7 +17,8 @@
     ]
   },
   "include": [
-    "2022/**/*.ts",
+    "2022",
+    "utils",
     "./.eslintrc.cjs",
   ],
   "exclude": [
